@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     res.send('API is up and running !!');
 });
 
-app.post('/search', async (req, res) => {
+app.get('/search', async (req, res) => {
     const query = req.query.q;
     const collectionRef = database.collection('trash');
     let allTrash = [];
