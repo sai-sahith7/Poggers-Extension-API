@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const admin = require('firebase-admin');
 require('dotenv').config();
+// enable CORS
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 
 const port = 3000;
 
